@@ -10,6 +10,8 @@
 		911D1F6A1F80E18900255DFB /* EnumdUserDefault.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911D1F601F80E18900255DFB /* EnumdUserDefault.framework */; };
 		911D1F6F1F80E18900255DFB /* EnumdUserDefaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D1F6E1F80E18900255DFB /* EnumdUserDefaultTests.swift */; };
 		911D1F711F80E18900255DFB /* EnumdUserDefault.h in Headers */ = {isa = PBXBuildFile; fileRef = 911D1F631F80E18900255DFB /* EnumdUserDefault.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		911D1F7B1F80E19900255DFB /* UserDefault+UserDefaultKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D1F7A1F80E19900255DFB /* UserDefault+UserDefaultKey.swift */; };
+		911D1F7D1F80E1A600255DFB /* UserDefaultKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D1F7C1F80E1A600255DFB /* UserDefaultKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		911D1F691F80E18900255DFB /* EnumdUserDefaultTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnumdUserDefaultTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		911D1F6E1F80E18900255DFB /* EnumdUserDefaultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumdUserDefaultTests.swift; sourceTree = "<group>"; };
 		911D1F701F80E18900255DFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		911D1F7A1F80E19900255DFB /* UserDefault+UserDefaultKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+UserDefaultKey.swift"; sourceTree = "<group>"; };
+		911D1F7C1F80E1A600255DFB /* UserDefaultKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 			children = (
 				911D1F631F80E18900255DFB /* EnumdUserDefault.h */,
 				911D1F641F80E18900255DFB /* Info.plist */,
+				911D1F7A1F80E19900255DFB /* UserDefault+UserDefaultKey.swift */,
+				911D1F7C1F80E1A600255DFB /* UserDefaultKey.swift */,
 			);
 			path = EnumdUserDefault;
 			sourceTree = "<group>";
@@ -148,6 +154,7 @@
 				TargetAttributes = {
 					911D1F5F1F80E18900255DFB = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					911D1F681F80E18900255DFB = {
@@ -196,6 +203,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				911D1F7D1F80E1A600255DFB /* UserDefaultKey.swift in Sources */,
+				911D1F7B1F80E19900255DFB /* UserDefault+UserDefaultKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +343,7 @@
 		911D1F751F80E18900255DFB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -347,6 +357,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.matsuokah.EnumdUserDefault;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -355,6 +366,7 @@
 		911D1F761F80E18900255DFB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -376,6 +388,7 @@
 		911D1F781F80E18900255DFB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 263N9Q866N;
 				INFOPLIST_FILE = EnumdUserDefaultTests/Info.plist;
@@ -390,6 +403,7 @@
 		911D1F791F80E18900255DFB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 263N9Q866N;
 				INFOPLIST_FILE = EnumdUserDefaultTests/Info.plist;
